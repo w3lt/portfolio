@@ -1,0 +1,61 @@
+.dashboard {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 78px;
+    background-color: #141414;
+    color: white;
+    width: 100%;
+    height: calc(100% - 78px);
+    align-items: center;
+    z-index: 1;
+}
+
+.avatar {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 200px;
+    margin-right: auto;
+}
+
+.avatar img {
+    width: 300px;
+    height: 300px;
+}
+
+.bio-info {
+    font-size: 2rem;
+    font-family: 'Ubuntu Mono', monospace;
+    margin-right: 300px;
+}
+
+.bio-title-container {
+    /*This part is important for centering*/
+    display: grid;
+    place-items: center;
+}
+
+.bio-title {
+    width: 259px;
+    overflow: hidden;
+    font-size: 4rem;
+    animation: typing 1s steps(8), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+      
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}

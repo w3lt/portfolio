@@ -1,0 +1,117 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 78px;
+    background-color: #141414;
+    color: white;
+    width: 100%;
+}
+
+.total-info {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 150px;
+}
+
+.total-info .title {
+    display: flex;
+    font-size: 2rem;
+}
+
+.total-info .signature {
+    display: flex;
+    font-size: 1.25rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.skills-container .title {
+    display: flex;
+    margin-left: 150px;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.tech-skills {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.grid-container {
+    width: calc(100% - 300px);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 100px;
+}
+
+.grid-item.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.skill .image img {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 10px;
+}
+
+.educations-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.educations-container .title {
+    display: flex;
+    margin-left: 150px;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.educations-container .content {
+    margin-left: 150px;
+}
+
+.education {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 10px 0;
+}
+
+.education .logo img {
+    width: 64px;
+    height: 64px;
+}
+
+.education .logo {
+    margin-right: 10px;
+}
+
+.education .info > div {
+    display: flex;
+}
+
+.education .info .school-name {
+    font-weight: 700;
+}
+
+
+
+/* .education .activities {
+    display: flex;
+    flex-direction: column;
+} */

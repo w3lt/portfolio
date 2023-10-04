@@ -1,0 +1,76 @@
+.header-container {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+    padding: 15px 0;
+    background-color: #141414;
+    color: white;
+    align-items: center;
+    user-select: none;
+    z-index: 12;
+}
+
+.my-name {
+    margin-left: 50px;
+    font-size: 2.5rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.my-name:hover {
+    cursor: pointer;
+    outline: none;
+}
+
+.header-tags {
+    display: flex;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.header-tags > .tag {
+    margin-left: 10px;
+    border: solid 1px transparent;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.header-tags > .tag:hover {
+    border-color: white;
+    cursor: pointer;
+}
+
+.header-tags > .tag:active {
+    background-color: white;
+    color: #141414;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.header-tags > .is-in {
+    border-color: white;
+    background-color: white;
+    color: #141414;
+}
+
+.contacts-drop-box {
+    border: solid 1px white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 78px;
+    right: 20px;
+}
+
+.contact {
+    padding: 5px 20px;
+    border: solid 1px white;
+}
+
+.contact:hover {
+    cursor: pointer;
+    color: #141414;
+    background-color: white;
+}
