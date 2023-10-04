@@ -3,6 +3,14 @@ import "./Header.css";
 
 function Header() {
 
+    const scrollToSection = (section: string) => {
+        // Get a reference to the About section element
+        const aboutSection = document.querySelector(`.${section}`);
+    
+        // Scroll to the About section smoothly
+        if (aboutSection !== null) aboutSection.scrollIntoView({ behavior: 'smooth' });
+    };
+
     const [isInTag, setIsInTag] = useState(-1);
 
     console.log(isInTag);
@@ -10,7 +18,7 @@ function Header() {
 
     const contacts: {platform: string, link: string}[] = [
         {platform: "Discord", link: "https://discordapp.com/users/866989139195199508"},
-        {platform: "Linkedin", link: "https://www.linkedin.com/in/tien-duy-pham-603022191/"},
+        {platform: "LinkedIn", link: "https://www.linkedin.com/in/tien-duy-pham-603022191/"},
         {platform: "Github", link: "https://github.com/riverlis"}
     ]
 
@@ -21,10 +29,7 @@ function Header() {
         </div>
         <div className="header-tags">
             {["About", "Projects", "Contact"].map((tagName, index) => (
-                <div className={`tag ${isInTag === index ? "is-in" : ""}`} key={index} onClick={() => {
-                    isInTag === index ? setIsInTag(-1) : setIsInTag(index);
-                    if (index !== 2) window.location.href = `/portfolio/${tagName.toLocaleLowerCase()}`;
-                }}>
+                <div className={`tag ${isInTag === index ? "is-in" : ""}`} key={index} onClick={() => scrollToSection(tagName.toLocaleLowerCase())}>
                     {tagName}
                     <span />
                 </div>

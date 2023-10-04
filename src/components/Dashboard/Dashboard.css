@@ -1,8 +1,6 @@
 .dashboard {
+    margin: 200px 0;
     display: flex;
-    position: absolute;
-    left: 0;
-    top: 78px;
     background-color: #141414;
     color: white;
     width: 100%;

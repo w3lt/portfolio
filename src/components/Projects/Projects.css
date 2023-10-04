@@ -1,8 +1,6 @@
-.projects-container {
+.projects {
     display: flex;
-    position: absolute;
-    top: 78px;
-    left: 0;
+    margin: 100px 0;
     width: 100%;
     height: calc(100% - 78px);
     flex-direction: column;

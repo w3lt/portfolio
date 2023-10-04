@@ -1,9 +1,7 @@
 .about {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 0;
-    top: 78px;
+    margin: 100px 0;
     background-color: #141414;
     color: white;
     width: 100%;
