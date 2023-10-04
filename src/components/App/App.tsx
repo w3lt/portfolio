@@ -9,15 +9,15 @@ import Header from '../Header/Header';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio",
     element: <Dashboard />
   },
   {
-    path: "/about",
+    path: "/portfolio/about",
     element: <About />
   },
   {
-    path: "/projects",
+    path: "/portfolio/projects",
     element: <Projects />
   }
 ])

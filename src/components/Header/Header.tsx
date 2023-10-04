@@ -15,7 +15,7 @@ function Header() {
     ]
 
     return <div className="header-container">
-        <div className="my-name" onClick={() => {window.location.href = "/";}}>
+        <div className="my-name" onClick={() => {window.location.href = "/portfolio";}}>
             Pham Tien Duy
             <span />
         </div>
@@ -23,7 +23,7 @@ function Header() {
             {["About", "Projects", "Contact"].map((tagName, index) => (
                 <div className={`tag ${isInTag === index ? "is-in" : ""}`} key={index} onClick={() => {
                     isInTag === index ? setIsInTag(-1) : setIsInTag(index);
-                    if (index !== 2) window.location.href = `/${tagName.toLocaleLowerCase()}`;
+                    if (index !== 2) window.location.href = `/portfolio/${tagName.toLocaleLowerCase()}`;
                 }}>
                     {tagName}
                     <span />
