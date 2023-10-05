@@ -65,8 +65,18 @@
 }
 
 .contact {
-    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
     border: solid 1px white;
+    width: 150px;
+}
+
+.contact img {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 20px;
+    margin-right: 5px;
 }
 
 .contact:hover {

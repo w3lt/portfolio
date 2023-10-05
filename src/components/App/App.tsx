@@ -1,36 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import Dashboard from '../Dashboard/Dashboard';
 import About from '../About/About';
-import Projects from '../Projects/Project';
+import Projects from '../Projects/Projects';
 import Header from '../Header/Header';
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/portfolio",
-//     element: <Dashboard />
-//   },
-//   {
-//     path: "/portfolio/about",
-//     element: <About />
-//   },
-//   {
-//     path: "/portfolio/projects",
-//     element: <Projects />
-//   }
-// ])
 
 function App() {
+
+  const [isInPage, setIsInPage] = useState(0);
+
   return <div className='App'>
-    <Header />
-    <div className='main-content-container'>
-      <Dashboard />
-      <About />
-      <Projects />
-    </div>
-    
-    
+    <Header setIsInPage={setIsInPage} />
+    {isInPage === 0 && <Dashboard />}
+    {isInPage === 1 && <About />}
+    {isInPage === 2 && <Projects />}
   </div>
 }
 

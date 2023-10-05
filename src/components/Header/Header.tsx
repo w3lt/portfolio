@@ -1,35 +1,40 @@
 import React, { useState } from "react";
 import "./Header.css";
 
-function Header() {
+import discordLogo from "../../assets/logo/discord_logo.png";
+import discordHoverLogo from "../../assets/logo/discord_logo_hover.png";
+import linkedinLogo from "../../assets/logo/linkedin_logo.png";
+import githubLogo from "../../assets/logo/github_logo.png";
+import githubHoverLogo from "../../assets/logo/github_logo_hover.png";
 
-    const scrollToSection = (section: string) => {
-        // Get a reference to the About section element
-        const aboutSection = document.querySelector(`.${section}`);
-    
-        // Scroll to the About section smoothly
-        if (aboutSection !== null) aboutSection.scrollIntoView({ behavior: 'smooth' });
-    };
+interface HeaderProps {
+    setIsInPage: React.Dispatch<React.SetStateAction<number>>;
+}
+
+function Header({ setIsInPage }: HeaderProps) {
 
     const [isInTag, setIsInTag] = useState(-1);
 
-    console.log(isInTag);
+    const [isHovering, setIsHovering] = useState(-1);
     
 
-    const contacts: {platform: string, link: string}[] = [
-        {platform: "Discord", link: "https://discordapp.com/users/866989139195199508"},
-        {platform: "LinkedIn", link: "https://www.linkedin.com/in/tien-duy-pham-603022191/"},
-        {platform: "Github", link: "https://github.com/riverlis"}
+    const contacts: {platform: string, link: string, logo: string, hoverLogo: string}[] = [
+        {platform: "Discord", link: "https://discordapp.com/users/866989139195199508", logo: discordLogo, hoverLogo: discordHoverLogo},
+        {platform: "Linkedin", link: "https://www.linkedin.com/in/tien-duy-pham-603022191/", logo: linkedinLogo, hoverLogo: linkedinLogo},
+        {platform: "Github", link: "https://github.com/riverlis", logo: githubLogo, hoverLogo: githubHoverLogo}
     ]
 
     return <div className="header-container">
-        <div className="my-name" onClick={() => {window.location.href = "/portfolio";}}>
+        <div className="my-name" onClick={() => {window.location.href = "/"; setIsInPage(0);}}>
             Pham Tien Duy
             <span />
         </div>
         <div className="header-tags">
             {["About", "Projects", "Contact"].map((tagName, index) => (
-                <div className={`tag ${isInTag === index ? "is-in" : ""}`} key={index} onClick={() => scrollToSection(tagName.toLocaleLowerCase())}>
+                <div className={`tag ${isInTag === index ? "is-in" : ""}`} key={index} onClick={() => {
+                    isInTag === index ? setIsInTag(-1) : setIsInTag(index);
+                    if (index !== 2) setIsInPage(index+1);
+                }}>
                     {tagName}
                     <span />
                 </div>
@@ -37,7 +42,12 @@ function Header() {
 
             {(isInTag === 2) && <div className="contacts-drop-box">
                 {contacts.map((contact, index) => (
-                    <div className="contact" key={index} onClick={() => {window.location.href = contact.link}}>{contact.platform}</div>
+                    <div className="contact" key={index} 
+                    onClick={() => {window.location.href = contact.link}}
+                    onMouseEnter={() => {setIsHovering(index)}}
+                    onMouseLeave={() => {setIsHovering(-1)}}>
+                        <img src={isHovering !== index ? contact.logo : contact.hoverLogo} alt="" /> {contact.platform}
+                    </div>
                 ))}
             </div>}
         </div>             
