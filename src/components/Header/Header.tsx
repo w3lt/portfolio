@@ -25,7 +25,7 @@ function Header({ setIsInPage }: HeaderProps) {
     ]
 
     return <div className="header-container">
-        <div className="my-name" onClick={() => {window.location.href = "/"; setIsInPage(0);}}>
+        <div className="my-name" onClick={() => {setIsInPage(0);}}>
             Pham Tien Duy
             <span />
         </div>
