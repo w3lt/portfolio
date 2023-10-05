@@ -84,3 +84,23 @@
     color: #141414;
     background-color: white;
 }
+
+@media (max-width: 530px) {
+    .header-container {
+        font-size: 1rem;
+    }
+
+    .my-name {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-name {
+        margin-left: 30px;
+    }
+
+    .header-tags {
+        margin-right: 10px;
+    }
+}

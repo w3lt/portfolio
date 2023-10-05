@@ -9,12 +9,16 @@
     width: 100%;
 }
 
+.about > div {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
 .total-info {
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin-left: 150px;
+    margin-top: 100px;
 }
 
 .total-info .title {
@@ -25,6 +29,7 @@
 .total-info .signature {
     display: flex;
     font-size: 1.25rem;
+    text-align: left;
 }
 
 .skills-container {
@@ -35,9 +40,25 @@
 
 .skills-container .title {
     display: flex;
-    margin-left: 150px;
-    font-size: 2rem;
     margin-bottom: 50px;
+    font-size: 2rem;
+    align-items: center;
+}
+
+.skills-container .title .drop-btn {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.skills-container .title .drop-btn:hover {
+    cursor: pointer;
+}
+
+.skills-container .title .drop-btn img {
+    max-height: 1rem;
+    max-width: 31px;
+    aspect-ratio: 31 / 16;
 }
 
 .tech-skills {
@@ -47,11 +68,18 @@
 }
 
 .grid-container {
-    width: calc(100% - 300px);
+    user-select: none;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(auto-fill, minmax(267.13px, 1fr));
+    /* grid-template-rows: repeat(3, auto); */
     grid-row-gap: 100px;
+}
+
+@media (max-width: 630px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 }
 
 .grid-item.skill {
@@ -76,13 +104,8 @@
 
 .educations-container .title {
     display: flex;
-    margin-left: 150px;
     font-size: 2rem;
     margin-bottom: 50px;
-}
-
-.educations-container .content {
-    margin-left: 150px;
 }
 
 .education {
@@ -103,15 +126,9 @@
 
 .education .info > div {
     display: flex;
+    text-align: left;
 }
 
 .education .info .school-name {
     font-weight: 700;
 }
-
-
-
-/* .education .activities {
-    display: flex;
-    flex-direction: column;
-} */

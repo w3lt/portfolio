@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
 
 
@@ -27,9 +27,13 @@ import insa_cvl_logo from "../../assets/educations/insa-cvl_logo.png";
 import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip } from 'react-tooltip';
 
+import aboutMeText from "../../about_me.txt";
+
+import upMenu from "../../assets/menu_up.png";
+import downMenu from "../../assets/menu_down.png";
+
 
 function About() {
-
     enum Proficiency {
         "Beginner" = 0,
         "Intermediate" = 1,
@@ -67,7 +71,7 @@ function About() {
         new Skill("Java", java_img, Proficiency[1]),
         new Skill("HTML", html_img, Proficiency[1]),
         new Skill("Swift", swift_img, Proficiency[1]),
-        new Skill("Spring Boot", springboot_img, Proficiency[1]),
+        new Skill("Spring Boot", springboot_img, Proficiency[0]),
     ];
 
     class Education {
@@ -106,16 +110,42 @@ function About() {
                     ["30-4 Olympic Gold Medal", "National Mathematic Olympic Certificate"])
     ]
 
+
+
+
+
+
+
+    const [aboutMe, setAboutMe] = useState("");
+
+    const [widthLessThan908px, setWidthLessThan908px] = useState(window.innerWidth <= 908);
+    const [isDrop, setIsDrop] = useState(false);
+
+    const [widthLessThan735px, setWidthLessThan735px] = useState(window.innerWidth <= 735);
+
+    useState(() => {
+        window.addEventListener('resize', () => {
+            setWidthLessThan908px(window.innerWidth <= 908);
+            setWidthLessThan735px(window.innerWidth <= 735);
+        })
+
+        fetch(aboutMeText)
+            .then(r => r.text())
+            .then(text => {setAboutMe(text)});
+    })
+
+    
+
     return <div className="about">
         <div className="total-info">
             <div className="title">About Me</div>
-            <div className="signature">The name Pham Tien Duy (John Silver), currently student at INSA Centre Val de Loire, with a dream to become a great technician.</div>
+            <div className="signature">{aboutMe}</div>
         </div>
 
         <div className="skills-container">
-            <div className="title">Skills</div>
+            <div className="title">Skills {widthLessThan908px && <span className="drop-btn" onClick={() => {setIsDrop(previous => !previous)}}><img src={isDrop ? upMenu : downMenu} alt="" /></span>}</div>
 
-            <div className="tech-skills">
+            {(!widthLessThan908px || isDrop) && <div className="tech-skills">
                 <div className="grid-container">
                     {mySkills.map((skill, index) => {
                         const className = skill.name.replace(/\W+/g, "-");
@@ -135,7 +165,7 @@ function About() {
                         </div>
                     })}
                 </div>
-            </div>
+            </div>}
 
             <div className="soft-skills">
 
@@ -149,9 +179,23 @@ function About() {
                 <div>
                     {myEducations.map((education, index) => (
                         <div key={index} className="education">
-                            <div className="logo">
+                            {widthLessThan735px && <div style={{margin: "auto 20px auto 0"}}>
+                                <div style={{fontWeight: "700"}}>{education.getDateString('start')}</div>
+                                <div>-</div>
+                                <div>{education.getDateString('end')}</div>
+                            </div>}
+                            <div className={`logo education-${index}`}>
                                 <img src={education.logo} alt="" />
                             </div>
+                            {widthLessThan735px ? <Tooltip anchorSelect={`.education-${index}`} place="bottom" border="solid 1px white" style={{maxWidth: "90%"}} closeOnEsc>
+                                <div className="info">
+                                    <div className="school-name">{education.schoolName}</div>
+                                    <div>{education.degree}, {education.studyField}</div>
+                                    {education.activities.length !== 0 && <div className="activities">
+                                        Activities & societies: {education.activities.join(", ")}
+                                    </div>}
+                                </div>
+                            </Tooltip> : 
                             <div className="info">
                                 <div className="school-name">{education.schoolName}</div>
                                 <div>{education.degree}, {education.studyField}</div>
@@ -159,7 +203,7 @@ function About() {
                                 {education.activities.length !== 0 && <div className="activities">
                                     Activities & societies: {education.activities.join(", ")}
                                 </div>}
-                            </div>
+                            </div>}
                         </div>
                     ))}
                 </div>

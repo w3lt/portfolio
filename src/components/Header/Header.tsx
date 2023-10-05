@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 
 import discordLogo from "../../assets/logo/discord_logo.png";
@@ -8,14 +8,16 @@ import githubLogo from "../../assets/logo/github_logo.png";
 import githubHoverLogo from "../../assets/logo/github_logo_hover.png";
 
 interface HeaderProps {
-    setIsInPage: React.Dispatch<React.SetStateAction<number>>;
+    setIsInPage: React.Dispatch<React.SetStateAction<number>>
 }
 
-function Header({ setIsInPage }: HeaderProps) {
+function Header({ setIsInPage } : HeaderProps) {
 
     const [isInTag, setIsInTag] = useState(-1);
 
     const [isHovering, setIsHovering] = useState(-1);
+
+    const [widthThan725px, setWidthThan725px] = useState(window.innerWidth >= 750);
     
 
     const contacts: {platform: string, link: string, logo: string, hoverLogo: string}[] = [
@@ -24,9 +26,15 @@ function Header({ setIsInPage }: HeaderProps) {
         {platform: "Github", link: "https://github.com/riverlis", logo: githubLogo, hoverLogo: githubHoverLogo}
     ]
 
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setWidthThan725px(window.innerWidth >= 750);
+        })
+    })
+
     return <div className="header-container">
         <div className="my-name" onClick={() => {setIsInPage(0);}}>
-            Pham Tien Duy
+            {widthThan725px ? "Pham Tien Duy" : "Silver"}
             <span />
         </div>
         <div className="header-tags">

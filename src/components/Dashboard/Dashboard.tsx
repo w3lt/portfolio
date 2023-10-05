@@ -13,7 +13,7 @@ function Dashboard() {
                 <div className="bio-title-container">
                     <div className="bio-title">I am Duy</div>
                 </div>
-                <div className="specialize" style={{fontSize: "4rem"}}>Full-stack Developer</div>
+                <div className="specialize">Full-stack Developer</div>
                 <div className="signature">On my way to become a great technician</div>
             </div>   
         </div>
