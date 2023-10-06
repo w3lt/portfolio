@@ -113,6 +113,10 @@
         font-size: 1.6rem;
     }
 
+    .contact {
+        width: 120px;
+    }
+
     .header-tags > .tag {
         margin-left: 5px;
         padding: 5px 15px;
@@ -135,6 +139,6 @@
 
     .contacts-drop-box {
         right: 10px;
-        top: 58px;
+        /* top: 58px; */
     }
 }
