@@ -65,6 +65,15 @@ function Projects() {
     ]
 
 
+    const [widthLessThan1136px, setWidthLessThan1136px] = useState(window.innerWidth <= 1136);
+
+    useState(() => {
+        window.addEventListener('resize', () => {
+            setWidthLessThan1136px(window.innerWidth <= 1136);
+        })
+    })
+
+
 
     return <div className="projects-container">
         <div className="projects">
@@ -81,6 +90,10 @@ function Projects() {
                             <img src={nextBannerSymbol} alt="" />
                         </div>
                     </div>
+                    {widthLessThan1136px ? <div className="info">
+                        <div className="name">{project.name} <span className="state">{project.state}</span></div>
+                        <div className="more" onClick={() => {window.location.href = `/project/${project.name.toLocaleLowerCase().replace(" ", "-")}`}}>More...</div>
+                    </div> :
                     <div className="info">
                         <div className="name">{project.name} <span className="state">{project.state}</span></div>
                         <div className="description">{project.description}</div>
@@ -94,7 +107,8 @@ function Projects() {
                             <span className="source-code" onClick={() => {window.location.href = project.sourceCode}}>Source Code</span>
                         </div>
                         <div className="more" onClick={() => {window.location.href = `/project/${project.name.toLocaleLowerCase().replace(" ", "-")}`}}>More about project...</div>
-                    </div>
+                    </div>}
+                    
                 </div>
             ))}
         </div>

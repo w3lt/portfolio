@@ -10,8 +10,8 @@
 }
 
 .about > div {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .total-info {
@@ -69,17 +69,11 @@
 
 .grid-container {
     user-select: none;
-    width: 90%;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(267.13px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(16.8%, 1fr));
     /* grid-template-rows: repeat(3, auto); */
     grid-row-gap: 100px;
-}
-
-@media (max-width: 630px) {
-    .grid-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
 }
 
 .grid-item.skill {
@@ -90,8 +84,9 @@
 }
 
 .skill .image img {
-    width: 96px;
-    height: 96px;
+    width: 35.85%;
+    aspect-ratio: 1;
+    height: auto;
     margin-bottom: 10px;
 }
 
@@ -131,4 +126,29 @@
 
 .education .info .school-name {
     font-weight: 700;
+}
+
+@media (max-width : 908px) {
+    .about > div {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1250px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
