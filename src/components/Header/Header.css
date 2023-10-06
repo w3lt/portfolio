@@ -85,6 +85,20 @@
     background-color: white;
 }
 
+@media screen and (max-width: 400px) {
+    .header-container {
+        font-size: 0.8rem;
+    }
+
+    .my-name {
+        font-size: 1.2rem;
+    }
+
+    .header-tags > .tag {
+        margin-left: 3px;
+    }
+}
+
 @media screen and (max-width: 530px) {
     .header-container {
         font-size: 1rem;
