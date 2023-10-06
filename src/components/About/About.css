@@ -128,26 +128,26 @@
     font-weight: 700;
 }
 
-@media (max-width : 908px) {
+@media screen and (max-width : 908px) {
     .about > div {
         margin-left: 50px;
         margin-right: 50px;
     }
 }
 
-@media (max-width: 1250px) {
+@media screen and (max-width: 1250px) {
     .grid-container {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (max-width: 1250px) {
+@media screen and (max-width: 1250px) {
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }

@@ -69,7 +69,7 @@
     }
 }
 
-@media (max-width: 1450px) {
+@media screen and (max-width: 1450px) {
     .dashboard {
         flex-direction: column;
         align-items: center;
@@ -84,7 +84,7 @@
     }
 }
 
-@media (max-width: 710px) {
+@media screen and (max-width: 710px) {
     .bio-info {
         font-size: 1rem;
     }
@@ -98,7 +98,7 @@
     }
 }
 
-@media (max-height: 720px) {
+@media screen and (max-height: 720px) {
     .bio-info {
         font-size: 1rem;
     }
@@ -112,7 +112,7 @@
     }
 }
 
-@media (max-height: 520px) {
+@media screen and (max-height: 520px) {
     .avatar {
         margin: 50px 0;
     }

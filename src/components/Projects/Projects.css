@@ -159,7 +159,7 @@
     opacity: 0.5;
 }
 
-@media (max-width: 1136px) {
+@media screen and (max-width: 1136px) {
     .project {
         flex-direction: column-reverse;
         width: 640px;
@@ -173,7 +173,7 @@
     }
 }
 
-@media (max-width: 711px) {
+@media screen and (max-width: 711px) {
     .project {
         width: 100%;
     }

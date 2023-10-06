@@ -85,7 +85,7 @@
     background-color: white;
 }
 
-@media (max-width: 530px) {
+@media screen and (max-width: 530px) {
     .header-container {
         font-size: 1rem;
     }
@@ -93,14 +93,23 @@
     .my-name {
         font-size: 1.6rem;
     }
+
+    .header-tags > .tag {
+        margin-left: 5px;
+    }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .my-name {
         margin-left: 30px;
     }
 
     .header-tags {
         margin-right: 10px;
+    }
+
+    .contacts-drop-box {
+        right: 10px;
+        top: 58px;
     }
 }
