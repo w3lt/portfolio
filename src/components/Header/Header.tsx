@@ -36,15 +36,15 @@ function Header({ setIsInPage } : HeaderProps) {
     })
 
     return <div className="header-container">
-        <div className="my-name" onClick={() => {window.location.href = "/";}}>
+        <div className="my-name" onClick={() => {setIsInPage(0)}}>
             {widthThan725px ? "Pham Tien Duy" : "Silver"}
             <span />
         </div>
         <div className="header-tags">
             {["About", "Projects", "Contact"].map((tagName, index) => (
-                <div className={`tag ${isInTag === index ? "is-in" : ""}`} key={index} onClick={() => {
+                <div className={`tag`} key={index} onClick={() => {
                     isInTag === index ? setIsInTag(-1) : setIsInTag(index);
-                    if (index !== 2) window.location.href = `/${tagName.toLocaleLowerCase()}`;
+                    if (index !== 2) setIsInPage(index+1);
                 }}>
                     {tagName}
                     <span />
