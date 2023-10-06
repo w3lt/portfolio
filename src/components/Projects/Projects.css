@@ -1,7 +1,7 @@
 .projects-container {
     display: flex;
     width: 100%;
-    height: calc(100% - 78px);
+    /* height: calc(100% - 78px); */
     flex-direction: column;
     color: white;
     align-items: center;
@@ -29,8 +29,9 @@
     display: flex;
     width: 640px;
     /* max-height: 360px; */
-    aspect-ratio: 16 / 9 ;
+    aspect-ratio: 16 / 9 !important;
     height: auto;
+    overflow: hidden;
     border: solid 1px white;
     margin-right: 20px;
     justify-content: center;
@@ -185,7 +186,5 @@
 
     .project .demo-img {
         width: 100%;
-        aspect-ratio: 16 / 9;
-        height: auto;
     }
 }
