@@ -67,6 +67,8 @@
 
 .project .info .more {
     display: flex;
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .project .info .more:hover {
