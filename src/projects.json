@@ -1,0 +1,40 @@
+{
+    "projects": [
+        {
+            "name": "Spotify clone",
+            "type": "cooperational",
+            "description": "A cheap clone version of spotify",
+            "technologies": ["React", "Nodejs", "TypeScript"],
+            "sourceCode": "https://github.com/riverlis/api-resources-server",
+            "demo": "assets/projects/spotify-clone/",
+            "state": "in progress"
+        },
+        {
+            "name": "Wibu Store",
+            "type": "personal",
+            "description": "A game selling store dedicated for wibu game",
+            "technologies": ["JavaScript", "Nodejs", "MySQL", "React", "HTML & CSS"],
+            "sourceCode": "https://github.com/riverlis/Wibu-Store",
+            "demo": "assets/projects/wibu-store/",
+            "state": "completed"
+        },
+        {
+            "name": "Messenger Clone",
+            "type": "personal",
+            "description": "A cheap clone version of Messenger app",
+            "technologies": ["JavaScript", "Nodejs", "MongoDB", "React", "HTML & CSS"],
+            "sourceCode": "https://github.com/riverlis/my-messenger/tree/silver",
+            "demo": "assets/projects/my-messenger/",
+            "state": "completed"
+        },
+        {
+            "name": "Multi-player game programming project",
+            "type": "academic",
+            "description": "A cheap clone version of Caesar III, a city-building game, with multi-player functionality improvement",
+            "technologies": ["Python", "C", "IPC"],
+            "sourceCode": "https://github.com/riverlis/Ceasar-III-clone/tree/final",
+            "demo": "",
+            "state": "completed"
+        }
+    ]
+}

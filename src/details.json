@@ -1,0 +1,36 @@
+{
+    "details": [
+        {
+            "about": "",
+            "technologies": {
+                "language": [],
+                "framework": [],
+                "other": []
+            }
+        },
+        {
+            "about": "Welcome to Wibu Store, where you can by whatever game you want. This webpage is built inspired by Epic Game Store and Steam. I have built this using a lot of technologies. Firstly, the front-end part is built by React. Secondly, the server is constructed under the microservices architecture. We have a RESTful API server that handles the requests from front-end part. Next, we have other microservices: data analysis server (dedicated for data analysis and recommendation), MySQL server, search engine and redis server (cache server).",
+            "technologies": {
+                "language": ["JavaScript", "Python", "MySQL", "HTML", "CSS"],
+                "framework": ["React", "Express", "Passport", "FastAPI"],
+                "other": ["Nodejs", "Stripe"]
+            }
+        },
+        {
+            "about": "A cheap clone version of messenger app. You can use it to chat with friends. You can add, remove friend, create new chat,.... This application is implemented by 2 parts. The first part is front-end built by React. Next, the server part is built by JavaScript.",
+            "technologies": {
+                "language": ["JavaScript", "Python", "MySQL", "HTML", "CSS"],
+                "framework": ["React", "Express", "Passport", "FastAPI"],
+                "other": ["Nodejs", "Stripe"]
+            }
+        },
+        {
+            "about": "A city-building game programmed by Python (using Pygame). This game is inspired by Caesar III (a city-building game of series Caesar), but improved by the network part allowing players to play in co-op mode (multiple-player). The network part is implemented by C",
+            "technologies": {
+                "language": ["Python", "C"],
+                "framework": ["Pygame"],
+                "other": []
+            }
+        }
+    ]
+}
