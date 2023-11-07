@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.656f6d9a.css",
+    "main.js": "/portfolio/static/js/main.854a6eaf.js",
+    "static/media/demo_0.png": "/portfolio/static/media/demo_0.94fcbee3405e8ab4bfb9.png",
+    "static/media/demo_1.png": "/portfolio/static/media/demo_1.e4960dc5f0f95b616137.png",
+    "static/media/demo_2.png": "/portfolio/static/media/demo_2.40700f1fb8027b2e376a.png",
+    "static/media/avatar.png": "/portfolio/static/media/avatar.8c5dd722e7a1af148757.png",
+    "static/media/python.png": "/portfolio/static/media/python.68da7a339a0041754a48.png",
+    "static/media/react.png": "/portfolio/static/media/react.838a0e5f76dce5dc17ee.png",
+    "static/media/java.png": "/portfolio/static/media/java.442890359eeea0353cfa.png",
+    "static/media/r.png": "/portfolio/static/media/r.310f4294243faeb71fa3.png",
+    "static/media/quoc_hoc_hue_logo.png": "/portfolio/static/media/quoc_hoc_hue_logo.1bf3d514d0f5d8a2981e.png",
+    "static/media/nodejs.png": "/portfolio/static/media/nodejs.f382fe95445459ba3122.png",
+    "static/media/springboot.png": "/portfolio/static/media/springboot.1a2df195942a1718f2c8.png",
+    "static/media/swift.png": "/portfolio/static/media/swift.104314f1a007f01798f6.png",
+    "static/media/copyright.png": "/portfolio/static/media/copyright.458bc84b6769ec2cfecc.png",
+    "static/media/javasript.png": "/portfolio/static/media/javasript.854d47751eb61d44ef81.png",
+    "static/media/html.png": "/portfolio/static/media/html.9b674892ef5960bafca3.png",
+    "static/media/mysql.png": "/portfolio/static/media/mysql.7d8d571e5629923eaf74.png",
+    "static/media/docker.png": "/portfolio/static/media/docker.8473b174e5d8a703f0d3.png",
+    "static/media/typescript.png": "/portfolio/static/media/typescript.89325a20fde5c10bb831.png",
+    "static/media/mongodb.png": "/portfolio/static/media/mongodb.7a16fc61d457c9e340e2.png",
+    "static/media/gmail_logo.png": "/portfolio/static/media/gmail_logo.5ef0db44d642bd4679ad.png",
+    "static/media/gmail_logo_hover.png": "/portfolio/static/media/gmail_logo_hover.93ca28f2feb120b0dc17.png",
+    "static/media/css.png": "/portfolio/static/media/css.2c665fabd4e233fa63ca.png",
+    "index.html": "/portfolio/index.html",
+    "static/media/about_me.txt": "/portfolio/static/media/about_me.400558d3af2dae6774f9.txt",
+    "main.656f6d9a.css.map": "/portfolio/static/css/main.656f6d9a.css.map",
+    "main.854a6eaf.js.map": "/portfolio/static/js/main.854a6eaf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.656f6d9a.css",
+    "static/js/main.854a6eaf.js"
+  ]
+}
